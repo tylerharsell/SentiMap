@@ -158,9 +158,11 @@ def main():
 	queries = ["Disney World", "Smithsonian Museum", "Gateway Arch", "Busch Stadium", "Zion National Park", "Grand Canyon", "Statue of Liberty", "Tampa Bay", "Orlando", "Charleston", "Miami", "Myrtle Beach", "The Alamo", "Panama City Beach", "Times Square", "Las Vegas", "Yosemite National Park", "New Orleans"]
 	disney_tweets = []
 	# calling function to get tweets
-	# for query in queries: 
+	for query in queries: 
+		location = get_location(query)
+		print(location)
 	# f = open('%s', 'w',)
-	tweets = api.get_tweets(query = "Zion National Park", count = 100)
+	# tweets = api.get_tweets(query = "Zion National Park", count = 100)
 	# num_tweets = 0
 	# f = open('disneytweetsjson.txt', 'w')
 	# for tweet in tweets: 
@@ -178,7 +180,7 @@ def main():
 		# 	".format(100*len(ntweets)/len(tweets)))
 		# average_sentiment = api.average_sentiment(tweets)
 		# print(average_sentiment)
-		# location = get_location(query)
+		
 		# print(average_sentiment)
 	# with open('disney_tweets.csv', 'w') as f:
 
